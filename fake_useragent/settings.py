@@ -13,7 +13,7 @@ DB = os.path.join(
     ),
 )
 
-CACHE_SERVER = 'https://fake-useragent.herokuapp.com/browsers/{version}'.format(  # noqa
+CACHE_SERVER = 'https://fake-useragent.herokuapp.com/browsers/{version}'.format(
     version=__version__,
 )
 
@@ -48,3 +48,8 @@ HTTP_TIMEOUT = 5
 HTTP_RETRIES = 2
 
 HTTP_DELAY = 0.1
+
+# can be 'no', 'yes' or 'any' (will be only mobile, non-mobile and any U-A respectively)
+MOBILE_UA = 'no'
+
+DISPLAY_MOBILE_UA_CHECK_TIME = True
