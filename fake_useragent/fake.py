@@ -3,11 +3,11 @@ from __future__ import absolute_import, unicode_literals
 
 import random
 from threading import Lock
-#
-# from fake_useragent import settings
-# from fake_useragent.errors import FakeUserAgentError
-# from fake_useragent.log import logger
-# from fake_useragent.utils import load, load_cached, str_types, update
+
+from fake_useragent import settings
+from fake_useragent.errors import FakeUserAgentError
+from fake_useragent.log import logger
+from fake_useragent.utils import load, load_cached, str_types, update
 #
 # #check is ua mobile
 import re
