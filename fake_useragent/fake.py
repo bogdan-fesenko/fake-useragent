@@ -155,10 +155,10 @@ class FakeUserAgent(object):
             created_ua = random.choice(self.data_browsers[browser])
             mobile_ua = MOBILE_UA.lower()
             #ua only non-mobile
-            while mobile_ua is 'no' and self.is_ua_mobile(created_ua):
+            while 'no' in mobile_ua and self.is_ua_mobile(created_ua):
                 created_ua = random.choice(self.data_browsers[browser])
             #ua only mobile
-            while mobile_ua is 'yes' and not self.is_ua_mobile(created_ua):
+            while 'yes' in mobile_ua and not self.is_ua_mobile(created_ua):
                 created_ua = random.choice(self.data_browsers[browser])
             return created_ua
 
