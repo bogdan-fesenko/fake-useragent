@@ -26,7 +26,7 @@ print("PATH:", file_basepath+'/mobile_ua.ini')
 # config.read_file(file_basepath+'/mobile_ua.ini')
 config.read(file_basepath+'/mobile_ua.ini')
 MOBILE_UA = config.get('SETTINGS', 'MOBILE_UA')
-DISPLAY_MOBILE_UA_CHECK_TIME = config.get('SETTINGS', 'DISPLAY_MOBILE_UA_CHECK_TIME')
+DISPLAY_MOBILE_UA_CHECK_TIME = config.getboolean('SETTINGS', 'DISPLAY_MOBILE_UA_CHECK_TIME')
 
 class FakeUserAgent(object):
     def __init__(
@@ -178,8 +178,6 @@ class FakeUserAgent(object):
             time_start = time.time()
         b = reg_b.search(user_agent)
         v = reg_v.search(user_agent[0:4])
-        print("b:", b)
-        print("v:", v)
         if DISPLAY_MOBILE_UA_CHECK_TIME:
             print("Time wasted for mobile user-agent checking={}s".format(round(time.time()-time_start, 3)))
         if b or v:
