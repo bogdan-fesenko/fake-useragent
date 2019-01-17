@@ -60,6 +60,12 @@ Usage
     # and the best one, random via real world browser usage statistic
     ua.random
 
+* 
+.. code-block:: shell
+    pip3 install -e git+https://github.com/bogdan-fesenko/fake-useragent#egg=fake-useragent
+after that ``sudo chmod a+rw mobile_ua.ini`` change config file to all users read+write so you can change mobile_ua settings.
+Seems like mobile_ua=yes doesn't work..
+
 Notes
 -----
 
