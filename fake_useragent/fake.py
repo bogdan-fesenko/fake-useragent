@@ -22,8 +22,6 @@ reg_v = re.compile(r"1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er
 # config = configparser.ConfigParser()
 config = configparser.RawConfigParser()
 file_basepath = os.path.dirname(os.path.abspath(__file__))
-print("PATH:", file_basepath+'/mobile_ua.ini')
-# config.read_file(file_basepath+'/mobile_ua.ini')
 config.read(file_basepath+'/mobile_ua.ini')
 MOBILE_UA = config.get('SETTINGS', 'MOBILE_UA')
 DISPLAY_MOBILE_UA_CHECK_TIME = config.getboolean('SETTINGS', 'DISPLAY_MOBILE_UA_CHECK_TIME')
