@@ -178,6 +178,8 @@ class FakeUserAgent(object):
             time_start = time.time()
         b = reg_b.search(user_agent)
         v = reg_v.search(user_agent[0:4])
+        print("b:", b)
+        print("v:", v)
         if settings.DISPLAY_MOBILE_UA_CHECK_TIME:
             print("Time wasted for mobile user-agent checking={}s".format(round(time.time()-time_start, 3)))
         if b or v:
